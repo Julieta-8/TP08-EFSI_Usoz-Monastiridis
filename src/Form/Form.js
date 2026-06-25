@@ -16,9 +16,18 @@ placeholder='ingrese..'
 onChangeText={handleNombreChange}
 value={nombre}
 />
+<TextInput
+style ={styles.input}
+placeholder='ingrese..'
+onChangeText={handleNombreChange}
+value={nombre}
+/>
 <Button
-title='Presioname'
+title='Ingresar'
 onPress ={()=> Alert.alert('A')}/>
+<Text>Olvidaste la clave?</Text>
+<Text>Crear Cuenta</Text>
+
 </View>
 </SafeAreaView>
 

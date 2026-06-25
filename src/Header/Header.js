@@ -9,7 +9,7 @@ return(
 <SafeAreaView style={styles.container}>
     <View>
 <StatusBar style = 'light'/>
-<Text>Nombre</Text>
+<Text>Login App(Apellido, Apellido)</Text>
 
 
 </View>
