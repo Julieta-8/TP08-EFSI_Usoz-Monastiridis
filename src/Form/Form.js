@@ -39,6 +39,9 @@ value={nombre}
 title='Ingresar'
     onPress={ingresar}
 />
+     {mensaje !== "" &&
+    <Text>{mensaje}</Text>
+}
 <Text>Olvidaste la clave?</Text>
 <Text>Crear Cuenta</Text>
 
