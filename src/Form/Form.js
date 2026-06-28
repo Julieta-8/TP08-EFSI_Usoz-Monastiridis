@@ -4,7 +4,20 @@ import { StatusBar } from 'expo-status-bar';
 import {SafeAreaView, StyleSheet, Text, View, Button, TextInput  } from 'react-native';
 
  const Form =() =>{
+const [usuario, setUsuario] = useState("");
+const [password, setPassword] = useState("");
+const [mensaje, setMensaje] = useState("");
 
+  const ingresar = () => {
+
+    if(usuario === "admin" && password === "1234"){
+        setMensaje("Ingreso correcto");
+    }
+    else{
+        setMensaje("Usuario o contraseña incorrectos");
+    }
+
+}
 return(
 <SafeAreaView style={styles.container}>
     <View>
@@ -24,7 +37,8 @@ value={nombre}
 />
 <Button
 title='Ingresar'
-onPress ={()=> Alert.alert('A')}/>
+    onPress={ingresar}
+/>
 <Text>Olvidaste la clave?</Text>
 <Text>Crear Cuenta</Text>
 
