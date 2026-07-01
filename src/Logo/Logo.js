@@ -1,7 +1,10 @@
 
 const [nombre, handleNombreChange] = React.useState('');
 import { StatusBar } from 'expo-status-bar';
-import {SafeAreaView, SafeAreaProvider, StyleSheet, Text, View, Button, TextInput  } from 'react-native';
+import { SafeAreaProvider, StyleSheet, Text, View, Button, TextInput  } from 'react-native';
+import {
+  SafeAreaView,
+} from 'react-native-safe-area-context';
 
  const Logo =() =>(
 
