@@ -1,30 +1,36 @@
 
-const [nombre, handleNombreChange] = React.useState('');
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, View, Button, TextInput  } from 'react-native';
-import {
-  SafeAreaView,
-} from 'react-native-safe-area-context';
 
  const Header =() =>{
 
 return(
-<SafeAreaView style={styles.container}>
-    <View>
-<StatusBar style = 'light'/>
-<Text>Login App(Apellido, Apellido)</Text>
-
-
-</View>
-</SafeAreaView>
+    <View style={styles.header}>
+      <StatusBar style="light" />
+      <Text style={styles.text}>
+        Login App (Apellido, Apellido)
+      </Text>
+    </View>
 
 
 )
+ }
 
 const styles = StyleSheet.create({
-  
+  header: {
+    backgroundColor: "#0b2722",
+    height: 70,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 20,
+  },
 
+  text: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
 });
 
-}
+
 export default Header;

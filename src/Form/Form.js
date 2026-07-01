@@ -2,9 +2,6 @@
 const [nombre, handleNombreChange] = React.useState('');
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, View, Button, TextInput  } from 'react-native';
-import {
-  SafeAreaView,
-} from 'react-native-safe-area-context';
 
  const Form =() =>{
 const [usuario, setUsuario] = useState("");
@@ -22,8 +19,8 @@ const [mensaje, setMensaje] = useState("");
 
 }
 return(
-<SafeAreaView style={styles.container}>
-    <View>
+
+    <View  style={styles.container}>
 <Text>Nombre</Text>
 
 <TextInput
@@ -49,21 +46,60 @@ title='Ingresar'
 <Text>Crear Cuenta</Text>
 
 </View>
-</SafeAreaView>
+
 
 
 )
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1, justifyContent: 'center',
-        marginHorizontal: 16,
-    },
-    title:{
-        textAlign: 'center', marginVertical:8,
-    },
+  container: {
+    paddingHorizontal: 35,
+  },
 
+  input: {
+    height: 48,
+    borderWidth: 1,
+    borderColor: "#8B5CF6",
+    borderRadius: 3,
+    paddingHorizontal: 10,
+    marginBottom: 15,
+    backgroundColor: "white",
+  },
+
+  boton: {
+    backgroundColor: "#7C4DFF",
+    height: 48,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 3,
+    marginTop: 10,
+  },
+
+  textoBoton: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+
+  mensaje: {
+    marginTop: 15,
+    textAlign: "center",
+    color: "red",
+  },
+
+  link: {
+    marginTop: 20,
+    textAlign: "center",
+    color: "#444",
+  },
+
+  crear: {
+    marginTop: 12,
+    textAlign: "center",
+    fontWeight: "600",
+    color: "#000",
+  },
 });
 
-}
 export default Form;
